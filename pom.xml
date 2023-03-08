@@ -8,6 +8,7 @@
     <modules>
         <module>barang-app</module>
         <module>pegawai-app</module>
+        <module>springMongo</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
