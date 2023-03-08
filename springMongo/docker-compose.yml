@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - 27027:27027
+    networks:
+      - java_network
+
+
+
+  java-mongo:
+    container_name: java-mongo
+    image: java-mongo:1.0
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
+    networks:
+      - java_network
+
+networks:
+  java_network:
+    name: java_network
